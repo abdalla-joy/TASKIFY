@@ -11,12 +11,12 @@ const server = http.createServer((req, res) => {
     }
     else{
         res.writeHead(404,'Not Foud',{ 'content-type': 'application/json'})
-        res.end(json.stringify({
+        res.end(JSON.stringify({
             meessage: 'sorry, you got'
         }))
     }
 });
 
 server.listen(PORT,HOSTNAME, ()=>{
-    Console.log('Server running on port ${PORT}')
+    console.log(`Server running on port ${PORT}`)
 })
